@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.container-todo{
+    background: rgb(52,0,179);
+    background: linear-gradient(90deg, rgba(52,0,179,1) 0%, rgba(0,3,33,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.canvas-3dglobe-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.mitad-texto{
+    height: 100vh;
+    display: flex;
+}
+
+.mitad-mapa{
+    height: auto;
+}
+
+.texto-home{
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: whitesmoke;
+    padding-top: 19%;
+    padding-left: 10%;
+}
+
+.span-texto-home{
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* HEADER NAV */
+
+.underline-hover::after{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: white;
+    display: block;
+    transition: all 200ms;
+}
+
+.underline-hover:hover::after{
+    width: 100%;
+}
+
+.barra-nav{
+    background: rgb(52,0,179);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo-barra-nav{
+    height: auto;
+    width: auto;
+}
+
+.nav-link{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.ul-nav li{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* CSS Plantilla paises */
+
+.container-titulo-pais{
+    padding-top: 10%;
+    padding-bottom: 2%;
+    margin-left: 5%;
+    width: 100%;
+}
+
+.nombre-pais{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Oswald', sans-serif;
+    padding: 0% 3% 0% 3%;
+    background: linear-gradient(rgba(5, 7, 12, 0.60), rgba(5, 7, 12, 0.60));
+}
+
+.bandera-titulo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.boton-titulo{
+    font-size: 4rem;
+}
+
+.boton-volver{
+    background: linear-gradient(rgba(5, 7, 12, 0.60), rgba(5, 7, 12, 0.60));
+    font-size: 2rem;
+    text-decoration: none;
+    clip-path: polygon(75% 0%, 95% 50%, 75% 100%, 0% 100%, 15% 50%, 0% 0%);
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.boton-volver:hover{
+    background-color: rgb(52,0,179);
+}
+
+.descripcion-pais{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1%;
+    margin-left: 5%;
+    width: 100%;
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+
+    background: linear-gradient(rgba(5, 7, 12, 0.60), rgba(5, 7, 12, 0.60));
+    border-radius: 10px;
+}
+
+.contenedor-productos-pais{
+    padding: 0%;
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2%;
+    justify-content: space-between;
+}
+
+.col-destacado {
+    flex: 0 0 calc(33.333% - 10px); /* El 33.333% es para 3 columnas, y 10px es el espacio entre ellas */
+    margin-right: 10px; /* Espacio entre las columnas */
+}
+
+/* CARD PRODUCTOS DESTACADOS */
+
+.card-img-top-destacado{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+}
+
+.card-destacado{
+    border-radius: 0px; 
+    border: solid white 0.2rem;
+    height: 60vh;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* CARD PRODUCTOS PÁGINA - PRODUCTOS */
+
+hr{
+    color: white;
+}
+
+.card{
+    border-radius: 0px; 
+    border: solid white 0.2rem;
+    height: 60vh;
+    cursor: pointer;
+}
+
+.container-card-img-top{
+    height: 40vh;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+}
+
+.card-body{
+    background-color: #1f2124 !important;
+    height: 20vh;
+}
+
+.card-title1{
+    font-size: 0.8rem !important;
+    color:gray !important;
+}
+
+.card-title{
+    font-size: 1.3rem !important;
+    color: white !important;
+    font-weight: bolder;
+}
+
+.bi{
+    margin-left: 10px;
+    font-size: 22px !important;
+    cursor: pointer;
+    color: white;
+}
+
+.bi:hover{
+    color: lightcoral;
+}
+
+.price{
+    font-size: 1.3rem !important;
+    font-weight: 500;
+    color: white !important; 
+}
+
+.fs-3dglobe-info-box{
+    width: auto;
+    height: auto;
+}
+
+.boton-vermas{
+    font-weight: 500;
+    background-color: transparent;
+}
+
+/* MODAL */
+
+.imagen-pequeña-modal{
+    width: 100%;
+}
+
+.botonera-modal{
+    margin-top: 3%;
+}
+
+.boton-carrito-modal{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgb(52,0,179);
+    color: white;
+    padding: 3%;
+}
+
+.nombre-modal{
+    font-weight: 700;
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    color: rgb(52,0,179);
+}
+
+.precio-modal{
+    font-size: 2rem;
+    color: rgb(52,0,179);
+    font-weight: 500;
+}
+
+.categoria-modal{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.descripcion-modal{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.modal-body{
+    background-color: #f5f3f0;
+}
+
+.modal-header{   
+    border: none;
+    padding-bottom: 0;
+    background-color: #f5f3f0;
+}
+
+/* PÁGINA PRODUCTOS */
+
+.container-main-productos{
+    background: rgb(52,0,179);
+    background: linear-gradient(90deg, rgba(52,0,179,1) 0%, rgba(0,3,33,1) 100%);
+    width: 100%; 
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.contenedor-catalogo{
+    background: rgb(52,0,179);
+    height: 97vh;
+    width: 100%;
+    margin-top: 3.9%;
+}
+
+.area-filtro{
+    background-color: white;
+}
+
+.area-productos{
+    background-color: #f5f3f0;
+    overflow-y: scroll;
+}
+
+.titulo-filtro{
+    font-weight: 700;
+}
+
+.elemento-filtro{
+    font-weight: 500;
+}
+
+.container-main-pruductos{
+    height: 100%;
+    width: 100%;
+}
+
+.label-filtros{
+    font-weight: 400;
+}
+
+.boton-limpiar-filtros{
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: white;
+    color: rgb(52,0,179);
+    border-color: rgb(52,0,179);
+}
+
+.boton-limpiar-filtros:hover{
+    background: rgb(52,0,179);
+    color: white;
+}
+
+/* FOOTER */
+
+.col-footer{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-footer{
+    color: white;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+.container-footer{
+    background: rgb(52,0,179);
+    color: white;
+}
